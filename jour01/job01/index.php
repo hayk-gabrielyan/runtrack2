@@ -19,4 +19,17 @@ echo "<br>";
 echo $val + 4;
 
 // Afficher chiifre 10 - end
+
+//My bool - start
+
+$myBool= true ;
+echo "<br>";
+echo $myBool;
+
+$myBool= false ;
+echo "<br>";
+echo $myBool;
+
+//My bool - end
+
 ?>
