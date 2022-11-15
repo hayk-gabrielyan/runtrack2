@@ -4,10 +4,10 @@
         if ($i % 3 == 0  && $i % 5 == 0){
             echo 'FizzBuzz<br>';
         }
-        elseif ($i % 3 == 0 ){
+        elseif ($i%3 == 0 ){
             echo 'Fizz<br>';
         }
-        elseif ($i % 5 == 0 ){
+        elseif ($i%5 == 0 ){
             echo 'Buzz<br>';
         }
 
