@@ -7,43 +7,34 @@
     <title>My test page</title>
   </head>
   <body>
-
-
 <form action="" method="post">
-
     <div>
         <label for="name">Nom :</label>
-        <input type="text" name="Nom" placeholder="saissisez ici votre Nom...">
+        <input type="text"  name="user_name" placeholder="saissisez ici votre nom...">
     </div>
     <div>
-        <label for="name">Prénom :</label>
-        <input type="text" name="Prénom" placeholder="saissisez ici votre Prénom...">
+        <label for="mail">e-mail&nbsp;:</label>
+        <input type="email"  name="user_mail" placeholder="saissisez ici votre mail...">
     </div>
-
+    <div>
+        <label for="msg">Message :</label>
+        <textarea  name="user_message" placeholder="saissisez ici votre message..."></textarea>
+    </div>
     <div class="button">
-        <button type="submit">Envoyer les données</button>
+        <button type="submit">Envoyer le message</button>
     </div>
 </form>
 
-<?php
+<?php 
 
-if ($_POST){
-echo '<table border=2>
-<thead>
-  <tr>
-    <th>Argument</th>
-    <th>Valeur</th>
-  </tr>
-</thead>';
+//echo "nombre d'arguments est : " , sizeof($_GET);
+$nombre=0;
+foreach ($_POST as $cle => $valeur) {
+//echo 'La clé ' . $cle . ' contient la valeur ' . $valeur . "\n";
+    $nombre++;
 }
 
-foreach($_POST as $argument => $valeur) {
-  echo "<tr>
-    <td>$argument</td>
-      <td>$valeur</td>
-    </tr>";
-}
-
+echo "<p> Nombre d'arguments est : $nombre <p>";
 ?>
 
   </body>
