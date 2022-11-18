@@ -7,10 +7,7 @@
     <title>My test page</title>
   </head>
   <body>
-
-
-<form action="action.php" method="get">
-
+<form action="" method="get">
     <div>
         <label for="name">Nom :</label>
         <input type="text" id="name" name="user_name" placeholder="saissisez ici votre nom...">
@@ -23,13 +20,22 @@
         <label for="msg">Message :</label>
         <textarea id="msg" name="user_message" placeholder="saissisez ici votre message..."></textarea>
     </div>
-
     <div class="button">
         <button type="submit">Envoyer le message</button>
     </div>
 </form>
 
+<?php 
 
+//echo "nombre d'arguments est : " , sizeof($_GET);
+$nombre=0;
+foreach ($_GET as $cle => $valeur) {
+//echo 'La clé ' . $cle . ' contient la valeur ' . $valeur . "\n";
+    $nombre++;
+}
+
+echo "<p> Nombre d'arguments est : $nombre <p>";
+?>
 
   </body>
 </html>
