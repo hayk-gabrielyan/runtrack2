@@ -1,5 +1,3 @@
-
-
 <?php session_start();
 
 if (isset($_SESSION['nbvisites'])){
@@ -12,7 +10,7 @@ if (isset($_GET['button'])){
     header("location:" . "index.php");
 }
 
-echo $_SESSION['nbvisites'];
+echo 'visiteur № : ' . $_SESSION['nbvisites'];
 ?>
 
 <form method="GET" >
