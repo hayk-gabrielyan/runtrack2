@@ -8,7 +8,7 @@
 $mysqli = new mysqli("localhost", "root", "", "jour09");
 $mysqli->set_charset("utf8");
 
-$request = $mysqli->query("SELECT SUM(capacite) FROM salles ;");
+$request = $mysqli->query("SELECT * FROM salles ORDER BY capacite DESC ;");
 
 $result = $request -> fetch_array(MYSQLI_ASSOC);
 
@@ -16,7 +16,7 @@ $result = $request -> fetch_array(MYSQLI_ASSOC);
     echo "<table border=1> <thead>";
         foreach ($result as $clé => $valeur)
         {
-        echo " <th> ". "capacite_totale" . " </th> ";
+        echo " <th> ". $clé . " </th> ";
         }
     echo "</thead>";
 
